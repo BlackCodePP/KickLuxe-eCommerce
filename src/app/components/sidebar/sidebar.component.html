@@ -1,0 +1,35 @@
+<div id="sidebar-container" class="container">
+  <div class="row">
+    <div id="sidebar" class="col-4">
+      <nav class="d-none d-md-block" aria-label="Product navigation">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item d-flex justify-content-center list-group-item-action active list-group-item-dark" id="list-home-list" data-bs-toggle="list" (click)="onAllProductsClick()" role="tab" aria-controls="list-home">Todos los productos</a>
+          <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-profile-list" data-bs-toggle="list" (click)="getProductsByBrand('Nike')" role="tab" aria-controls="list-profile">Nike</a>
+          <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-messages-list" data-bs-toggle="list" (click)="getProductsByBrand('Adidas')" role="tab" aria-controls="list-messages">Adidas</a>
+          <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-settings-list" data-bs-toggle="list" (click)="getProductsByBrand('New Balance')" role="tab" aria-controls="list-settings">New Balance</a>
+          <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-home-list" data-bs-toggle="list" (click)="getProductsByBrand('Jordan')" role="tab" aria-controls="list-home">Jordan</a>
+          <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-profile-list" data-bs-toggle="list" (click)="getProductsByBrand('Vans')"role="tab" aria-controls="list-profile">Vans</a>
+          <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-messages-list" data-bs-toggle="list" (click)="getProductsByBrand('Puma')" role="tab" aria-controls="list-messages">Puma</a>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-md d-md-none" aria-label="Product navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse"  style="z-index: 9999;" id="navbarNav">
+          <div class="list-group position-fixed w-50" id="list-tab-mobile" role="tablist" style="z-index: 9999;">
+            <a class="list-group-item d-flex justify-content-center list-group-item-action active list-group-item-dark" id="list-home-list" data-bs-toggle="list" (click)="onAllProductsClick()" role="tab" aria-controls="list-home">Todos los productos</a>
+            <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-profile-list" data-bs-toggle="list" (click)="getProductsByBrand('Nike')" role="tab" aria-controls="list-profile">Nike</a>
+            <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-messages-list" data-bs-toggle="list" (click)="getProductsByBrand('Adidas')" role="tab" aria-controls="list-messages">Adidas</a>
+            <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-settings-list" data-bs-toggle="list" (click)="getProductsByBrand('New Balance')" role="tab" aria-controls="list-settings">New Balance</a>
+            <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-home-list" data-bs-toggle="list" (click)="getProductsByBrand('Jordan')" role="tab" aria-controls="list-home">Jordan</a>
+            <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-profile-list" data-bs-toggle="list" (click)="getProductsByBrand('Vans')"role="tab" aria-controls="list-profile">Vans</a>
+            <a class="list-group-item d-flex justify-content-center list-group-item-action list-group-item-dark" id="list-messages-list" data-bs-toggle="list" (click)="getProductsByBrand('Puma')" role="tab" aria-controls="list-messages">Puma</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>  
+</div>
+

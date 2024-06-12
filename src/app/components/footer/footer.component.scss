@@ -1,0 +1,93 @@
+.footer {
+    margin-top: 150px;
+    background-color: rgba(41, 40, 45, 0.99);
+
+    ul {
+        list-style-type: none;
+        padding: 0px;
+    }
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .footer-links {
+            width: 20%;
+            padding: 0 15px;
+            h4 {
+                font-size: 20px;
+                color: #ffffff;
+                margin-bottom: 15px;
+                font-weight: 500;
+                position: relative;
+                padding-bottom: 10px;
+                display: inline-block;
+                padding-top: 20px;
+            }
+            h4::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                width: 100%;
+                height: 3px;
+                background: linear-gradient(to right, #00d4ff 0%, #6a0979 69%);
+                border-radius: 5px;
+            }
+            a {
+                cursor: pointer;
+                text-decoration: none;
+                color: #bbbbbb;
+                display: inline-block;
+                margin-bottom: 15px;
+                transition: all .3s ease;
+            }
+            
+            a:hover {
+                color: #ffffff;
+                padding-left: 6px;
+            }
+
+            .social-link {
+                margin-top: 8px;
+                a {
+                    cursor: pointer;
+                    display: inline-block;
+                    min-height: 40px;
+                    width: 40px;
+                    background-color: rgb(255, 255, 255, 0.2);
+                    margin: 0 10px 10px 0;
+                    text-align: center;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    color: #ffffff;
+                    transition: all .5s ease;
+                }
+                
+                a:hover {
+                    background:#00d4ff;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .footer-row {
+
+        ul {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width:550px) {
+    footer{
+        display: none;
+    }
+}
+
+
+
+
+

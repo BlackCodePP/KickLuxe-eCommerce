@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-image: url("/assets/img/shoes-4579068.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        .col-10 {
+            width: 100%;
+        }
+    }
+    
+}

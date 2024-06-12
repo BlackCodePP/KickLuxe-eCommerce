@@ -1,0 +1,22 @@
+<div id="cart-container">
+    <ul class="list-group">
+        @for (item of cart; track item.product) {
+            <li class="list-group-item">
+                <h2>{{ item.product.nombre }}</h2>
+                <img [src]="'http://localhost/img/' + item.product.imagen" alt="Producto" height="150" width="150">
+                    <p>{{ item.product.descripcion }}</p>
+                <p>Precio: {{ item.product.precio }} €</p>
+                <div class="button-container">
+                    <a (click)="decreaseQuantity(item.product)"><i class="bi bi-dash-circle-fill"></i></a>
+                    <p>Cantidad: {{ item.quantity }}</p>
+                    <a (click)="increaseQuantity(item.product)"><i class="bi bi-plus-circle-fill"></i></a>
+                </div>
+            </li>
+            <a (click)="removeFromCart(item.product)" class="btn btn-danger">Eliminar</a>
+        }
+    </ul>
+    <div class="price-container">
+        <p>Precio total: {{ totalPrice }} €</p>
+        <a (click)="checkout()" class="btn btn-primary">Comprar</a>
+    </div>
+</div>

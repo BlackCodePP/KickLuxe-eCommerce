@@ -1,0 +1,35 @@
+<nav id="header-container" class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a id="logo" class="navbar-brand" routerLink="/home">KickLuxe</a>
+    <div class="d-flex" id="navbarNav">
+      <ul class="navbar-nav">
+        <div class="d-flex">
+          <li id="list-login" class="nav-item d-flex justify-content-between">
+            <a [class.display-block]="!loggedIn" [class.display-none]="loggedIn" class="nav-link" routerLink="/login">Acceder</a>
+          </li>
+          <li id="list-register" class="nav-item">
+            <a [class.display-block]="!loggedIn" [class.display-none]="loggedIn" class="nav-link" routerLink="/register">Registrar</a>
+          </li>
+          <li class="nav-item dropdown" [class.display-block]="loggedIn" [class.display-none]="!loggedIn">
+            <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-fill"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="/panel">Ver mis pedidos</a></li>
+              <li><a id="logout-button" class="dropdown-item" (click)="logout()">Cerrar sesión</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button id="cart-button" [class.display-block]="loggedIn" [class.display-none]="!loggedIn" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-cart-fill"></i>
+              <span class="badge bg-danger" *ngIf="totalQuantity > 0">{{ totalQuantity }}</span>
+            </button>
+            <div id="cart-container" class="dropdown-menu dropdown-menu-end" (click)="$event.stopPropagation()">
+              <app-shopping-cart></app-shopping-cart>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>

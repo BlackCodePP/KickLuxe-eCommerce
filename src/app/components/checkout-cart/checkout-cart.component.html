@@ -1,0 +1,52 @@
+<div id="login-error" class="alert alert-danger text-center" role="alert" *ngIf="errorMessage">{{ errorMessage }}</div>
+<div class="container">
+    <h1>Comprobar carrito</h1>
+    <hr>
+    @for(item of individualProducts; track  item.id){
+        <div id="card-container" class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="delete-button-container">
+                    <a (click)="decreaseQuantity(item)"><i class="bi bi-x-circle-fill"></i></a>
+                </div>
+                <div id="img-container" class="col-md-4">
+                    <img [src]="'http://localhost/img/' + item.imagen" class="img-fluid rounded-start" alt="Producto">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.nombre}}</h5>
+                        <p class="card-text">{{item.descripcion}}</p>
+                        <p class="card-text">Precio: {{item.precio}} €</p>
+                        <div class="container-talla">
+                            <label for="talla">Talla: </label>
+                            <select id="talla" [(ngModel)]="item.selectedTalla" class="form-select" aria-label="Default select example">
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                                <option value="46">46</option>
+                                <option value="47">47</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="container-total-price">
+        <h2>Total: {{totalFinalPrice}} €</h2>
+    </div>
+    <form [formGroup]="validatecheckoutForm" class="mb-3">
+        <label for="direccion" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" formControlName="direccion">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" formControlName="telefono">
+    </form>
+    <div class="button-container">
+        <button [disabled]="!validatecheckoutForm.valid" (click)="onCheckout()" type="button" class="btn btn-primary">Pagar</button>
+    </div>
+</div>
+

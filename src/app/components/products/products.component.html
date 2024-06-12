@@ -1,0 +1,20 @@
+<div id="products-container" class="container-fluid">
+    <div class="container-fluid">
+        <div class="row">
+            @for(product of products; track  product.id){
+                <div class="col d-flex justify-content-center">
+                    <div class="card " style="width: 18rem;">
+                        <img [src]="'http://localhost/img/' + product.imagen" class="card-img-top" alt="Producto">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{ product.nombre }}</h5>
+                            <p>{{ product.descripcion }}</p>
+                            <p>Precio: {{ product.precio }} €</p>
+                            <p>{{product.marca}}</p>
+                            <a id="button-add" (click)="addToCart(product)" class="btn btn-primary">Añadir al carrito</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

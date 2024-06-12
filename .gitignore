@@ -1,0 +1,36 @@
+# Archivos de dependencias
+/node_modules
+
+# Archivos de configuración de IDEs y editores
+/.vscode
+/.idea
+/*.iml
+/*.suo
+/*.user
+/*.userprefs
+/*.sln.docstates
+
+# Archivos de registro
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de construcción
+/dist
+/tmp
+/out-tsc
+
+# Archivos de configuración de Angular
+/angular.json
+/.angular-build.json
+/.angular-serve.json
+
+# Archivos de configuración de TypeScript
+/tsconfig.*
+!tsconfig.json
+!/src/tsconfig.app.json
+!/src/tsconfig.spec.json
+!/e2e/tsconfig.json
+
+# Archivos de cache de Angular
+/.angular/cache/

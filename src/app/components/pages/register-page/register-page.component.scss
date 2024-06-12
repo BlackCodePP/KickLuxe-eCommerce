@@ -1,0 +1,18 @@
+* {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-image: url("/assets/img/shoes-4579068.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;   
+
+    app-footer {
+        margin-top: 570px;
+    }
+}

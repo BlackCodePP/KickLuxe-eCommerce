@@ -1,0 +1,24 @@
+<div class="card" *ngFor="let userOrder of userOrders">
+    <div id="products-container" class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="order-container d-flex">
+                    <div id="card-product" class="card" *ngFor="let userProduct of userOrder.productos" style="width: 10rem;">
+                        <img [src]="'http://localhost/img/' + userProduct.imagen" class="card-img-top" alt="Producto">
+                        <div class="card-body">
+                            <h6 class="card-title"> {{ userProduct.nombre}}</h6>
+                            <p>{{ "Talla: " + userProduct.talla }}</p>
+                            <p>{{ userProduct.descripcion }}</p>
+                            <p>Precio: {{ userProduct.precio }} €</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-pedido">
+                    <p>Fecha del pedido: {{ userOrder.fecha }}</p>
+                    <p>Total: {{ userOrder.precio_total }} €</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 525px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+
+  .delete-button-container {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    padding-right: 10px;
+
+    i {
+      color: red;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  }	
+
+  .container-talla {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .form-select {
+      width: 100px;
+      margin-right: 10px;
+    }
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
+
+  form {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    label {
+      margin-right: 10px;
+    }
+
+    input {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  #card-container {
+    width: 300px;
+
+    #img-container {
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 200px;
+        max-height: 200px;
+      }
+    }
+  }
+}
