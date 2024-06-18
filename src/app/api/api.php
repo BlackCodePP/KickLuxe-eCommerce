@@ -6,10 +6,10 @@
   define("INPUT_STREAM", "php://input");
   
   // Introducir los datos de conexión a la base de datos
-  $servername = "monorail.proxy.rlwy.net:17911";
-  $username = "root";
-  $password = "PeUDJHMxwzrgNjSJGzbDrwjqMOfSjgUR";
-  $dbname = "railway";
+  $servername = "";
+  $username = "";
+  $password = "";
+  $dbname = "";
 
   // Crear conexión
   $conn = new mysqli($servername, $username, $password, $dbname);
