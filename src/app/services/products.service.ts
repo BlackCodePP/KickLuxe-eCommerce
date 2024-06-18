@@ -4,13 +4,12 @@ import { IProduct } from '../interfaces/IProduct';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductsService {
-
   private apiUrl = 'http://localhost/api.php/products';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // BehaviorSubject para almacenar los productos
   products = new BehaviorSubject<IProduct[]>([]);
@@ -18,24 +17,24 @@ export class ProductsService {
   // Método para obtener todos los productos
   getAllProducts(): void {
     this.http.get<IProduct[]>(this.apiUrl).subscribe({
-      next: products => {
+      next: (products) => {
         this.products.next(products);
       },
-      error: error => {
+      error: (error) => {
         console.error(error);
-      }
+      },
     });
   }
-  
+
   // Método para obtener los productos de una marca específica
   getProductsByBrand(brand: string): void {
     this.http.get<IProduct[]>(`${this.apiUrl}?brand=${brand}`).subscribe({
-      next: products => {
+      next: (products) => {
         this.products.next(products);
       },
-      error: error => {
+      error: (error) => {
         console.error(error);
-      }
+      },
     });
   }
 }
