@@ -9,8 +9,12 @@ Este proyecto fue generado con Angular CLI versión 17.2.3.
 Para probar la aplicación en local, necesitarás configurar tu propia base de datos. Puedes encontrar el script de la base de datos en `src/app/database`.
 
 1. Crea una nueva base de datos en tu sistema de gestión de bases de datos preferido.
-2. Ejecuta el script de la base de datos para configurar la estructura de la base de datos.
+2. Ejecuta el script de la base de datos `src/app/database/kickluxe.sql` para configurar la estructura de la base de datos.
 3. Abre el archivo `src/app/api/api.php` y rellena las variables `$servername`, `$username`, `$password` y `$dbname` con los detalles de tu base de datos.
+4. Descarga e instala XAMPP.
+5. Coloca el archivo `src/app/api/api.php` en la carpeta `C:\xampp\htdocs`.
+6. Ejecuta Apache desde XAMPP y la base de datos que estés utilizando.
+7. Arranca la aplicación desde tu IDE o desde la terminal con ng serve
 
 ## Servidor de desarrollo
 
